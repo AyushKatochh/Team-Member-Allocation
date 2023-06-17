@@ -8,6 +8,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import GroupedTeamMembers from './GroupedTeamMembers';
 import Nav from './Nav';
+import NotFound from './NotFound';
 
 
 function App() {
@@ -131,7 +132,8 @@ function App() {
     <Route path="/"
     element={<Employees employees={employees} selectedTeam={selectedTeam} handleEmployeeCardClick={handleEmployeeCardClick} handleTeamSelectionChange={handleTeamSelectionChange} />
   }></Route>
-    <Route path="/GroupedTeamMembers" element={<GroupedTeamMembers />}></Route>
+    <Route path="/GroupedTeamMembers" element={<GroupedTeamMembers employees = {employees} selectedTeam={selectedTeam} setTeam={setTeam}/>}></Route>
+    <Route path="*" element={<NotFound />}></Route>
    </Routes> 
     <Footer />
     </Router>
