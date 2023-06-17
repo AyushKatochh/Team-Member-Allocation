@@ -9,4 +9,8 @@ const NotFound = ({selectedTeam, teamMemberCount}) => {
         </header>
     )
 }
+<<<<<<< HEAD
 export default NotFound;
+=======
+export default NotFound;
+>>>>>>> 2762f4c4e6c86cc92fc4cee5c13fde5dc709ab5f
